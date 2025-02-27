@@ -1,0 +1,18 @@
+{
+    "name": "MCP File Search",
+    "type": "http",
+    "url": "http://localhost:8000",
+    "method": "GET",
+    "parameters": {
+        "path": "{query}"
+    },
+    "response": {
+        "format": "json",
+        "fields": [
+            {"name": "name", "path": "$[*].name"},
+            {"name": "path", "path": "$[*].path"},
+            {"name": "size", "path": "$[*].size"},
+            {"name": "creation_date", "path": "$[*].creation_date"}
+        ]
+    }
+}
